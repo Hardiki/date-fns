@@ -12,7 +12,7 @@ import buildTokensRegExp from '../_lib/buildTokensRegExp/index.js'
  * @summary Hindi locale.
  * @language Hindi
  * @iso-639-2 hin
- * @author Hardiki Devre [@hardiki]{@link https://github.com/Hardiki}
+ * @author HardikiDevre [@hardiki]{@link https://github.com/Hardiki}
  */
 var locale = {
   formatDistance: formatDistance,
