@@ -14,7 +14,7 @@ describe('en-US locale > formatDistance', function () {
 
     context('जब गिनती 1 से अधिक है', function () {
       it('एक उचित स्ट्रिंग देता है', function () {
-        assert(formatDistance('lessThanXSeconds', 2) === 'less than 2 seconds')
+        assert(formatDistance('lessThanXSeconds', 2) === 'कम से कम 2 सेकंड')
       })
     })
   })
@@ -22,37 +22,37 @@ describe('en-US locale > formatDistance', function () {
   describe('xSeconds', function () {
     context('जब गिनती 1 के बराबर होती है', function () {
       it('एक उचित स्ट्रिंग देता है', function () {
-        assert(formatDistance('xSeconds', 1) === '1 second')
+        assert(formatDistance('xSeconds', 1) === '1 सेकेंड')
       })
     })
 
-    context('when the count is more than 1', function () {
+    context('जब गिनती 1 से अधिक है', function () {
       it('एक उचित स्ट्रिंग देता है', function () {
-        assert(formatDistance('xSeconds', 2) === '2 seconds')
+        assert(formatDistance('xSeconds', 2) === '2 सेकेंड')
       })
     })
   })
 
   describe('halfAMinute', function () {
     it('एक उचित स्ट्रिंग देता है', function () {
-      assert(formatDistance('halfAMinute') === 'half a minute')
+      assert(formatDistance('halfAMinute') === 'आधा मिनट')
     })
 
-    it('ignores the second argument', function () {
-      assert(formatDistance('halfAMinute', 123) === 'half a minute')
+    it('दूसरे तर्क को अनदेखा करता है', function () {
+      assert(formatDistance('halfAMinute', 123) === 'आधा मिनट')
     })
   })
 
   describe('lessThanXMinutes', function () {
     context('जब गिनती 1 के बराबर होती है', function () {
       it('एक उचित स्ट्रिंग देता है', function () {
-        assert(formatDistance('lessThanXMinutes', 1) === 'less than a minute')
+        assert(formatDistance('lessThanXMinutes', 1) === 'एक मिनट से कम')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('lessThanXMinutes', 2) === 'less than 2 minutes')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('lessThanXMinutes', 2) === '2 मिनट से कम')
       })
     })
   })
@@ -66,144 +66,144 @@ describe('en-US locale > formatDistance', function () {
 
     context('जब गिनती 1 से अधिक है', function () {
       it('एक उचित स्ट्रिंग देता है', function () {
-        assert(formatDistance('xMinutes', 2) === '2 minutes')
+        assert(formatDistance('xMinutes', 2) === '2 मिनट')
       })
     })
   })
 
   describe('aboutXHours', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXHours', 1) === 'about 1 hour')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXHours', 1) === 'लगभग 1 घंटे')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXHours', 2) === 'about 2 hours')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXHours', 2) === 'लगभग 2 घंटे')
       })
     })
   })
 
   describe('xHours', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xHours', 1) === '1 hour')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xHours', 1) === '1 घंटा')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xHours', 2) === '2 hours')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xHours', 2) === '2 घंटे')
       })
     })
   })
 
   describe('xDays', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xDays', 1) === '1 day')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xDays', 1) === 'एक दिन')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xDays', 2) === '2 days')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xDays', 2) === '2 दिन')
       })
     })
   })
 
   describe('aboutXMonths', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXMonths', 1) === 'about 1 month')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXMonths', 1) === 'लगभग 1 महीने')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXMonths', 2) === 'about 2 months')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXMonths', 2) === 'लगभग 2 महीनेs')
       })
     })
   })
 
   describe('xMonths', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xMonths', 1) === '1 month')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xMonths', 1) === ' 1 महीना')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xMonths', 2) === '2 months')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xMonths', 2) === '2 महीने')
       })
     })
   })
 
   describe('aboutXYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXYears', 1) === 'about 1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXYears', 1) === 'लगभग 1 वर्ष')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXYears', 2) === 'about 2 years')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXYears', 2) === ' लगभग 2 साल')
       })
     })
   })
 
   describe('xYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xYears', 1) === '1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xYears', 1) === ' 1 साल')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xYears', 2) === '2 years')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xYears', 2) === '2 साल')
       })
     })
   })
 
   describe('overXYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('overXYears', 1) === 'over 1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('overXYears', 1) === '1 वर्ष से अधिक')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('overXYears', 2) === 'over 2 years')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('overXYears', 2) === '2 वर्ष से अधिक')
       })
     })
   })
 
   describe('almostXYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('almostXYears', 1) === 'almost 1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('almostXYears', 1) === 'लगभग 1 वर्ष')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('almostXYears', 2) === 'almost 2 years')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('almostXYears', 2) === 'लगभग 2 वर्ष')
       })
     })
   })
 
-  context('with a past suffix', function () {
+  context(' पिछले प्रत्यय के साथ', function () {
     it('adds `ago` to a string', function () {
       var result = formatDistance('aboutXYears', 1, {
         addSuffix: true,
         comparison: -1
       })
-      assert(result === 'about 1 year ago')
+      assert(result === 'लगभग 1 वर्ष पूर्व')
     })
   })
 
@@ -213,7 +213,7 @@ describe('en-US locale > formatDistance', function () {
         addSuffix: true,
         comparison: 1
       })
-      assert(result === 'in half a minute')
+      assert(result === 'आधा मिनट में')
     })
   })
 })
@@ -225,204 +225,204 @@ import formatDistance from '.'
 
 describe('en-US locale > formatDistance', function () {
   describe('lessThanXSeconds', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('lessThanXSeconds', 1) === 'less than a second')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('lessThanXSeconds', 1) === 'एक सेकंड से कम')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('lessThanXSeconds', 2) === 'less than 2 seconds')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('lessThanXSeconds', 2) === ' 2 सेकंड से कम')
       })
     })
   })
 
   describe('xSeconds', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xSeconds', 1) === '1 second')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xSeconds', 1) === '1 सेकेंड')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xSeconds', 2) === '2 seconds')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xSeconds', 2) === ' 2 सेकेंड')
       })
     })
   })
 
   describe('halfAMinute', function () {
-    it('returns a proper string', function () {
-      assert(formatDistance('halfAMinute') === 'half a minute')
+    it(' एक उचित स्ट्रिंग देता है', function () {
+      assert(formatDistance('halfAMinute') === 'आधा मिनट')
     })
 
     it('ignores the second argument', function () {
-      assert(formatDistance('halfAMinute', 123) === 'half a minute')
+      assert(formatDistance('halfAMinute', 123) === 'आधा मिनट')
     })
   })
 
   describe('lessThanXMinutes', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('lessThanXMinutes', 1) === 'less than a minute')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('lessThanXMinutes', 1) === 'एक मिनट से कम')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('lessThanXMinutes', 2) === 'less than 2 minutes')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('lessThanXMinutes', 2) === '2 मिनट से कम')
       })
     })
   })
 
   describe('xMinutes', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xMinutes', 1) === '1 minute')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xMinutes', 1) === '1 मिनट')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xMinutes', 2) === '2 minutes')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xMinutes', 2) === 'दो मिनट')
       })
     })
   })
 
   describe('aboutXHours', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXHours', 1) === 'about 1 hour')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXHours', 1) === 'लगभग 1 घंटे')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXHours', 2) === 'about 2 hours')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXHours', 2) === 'लगभग दो घंटे')
       })
     })
   })
 
   describe('xHours', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xHours', 1) === '1 hour')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xHours', 1) === '1 घंटा')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xHours', 2) === '2 hours')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xHours', 2) === '2 घंटे')
       })
     })
   })
 
   describe('xDays', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xDays', 1) === '1 day')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xDays', 1) === ' एक दिन')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xDays', 2) === '2 days')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xDays', 2) === '2 दिन')
       })
     })
   })
 
   describe('aboutXMonths', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXMonths', 1) === 'about 1 month')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXMonths', 1) === 'लगभग 1 महीने')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXMonths', 2) === 'about 2 months')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXMonths', 2) === 'लगभग 2 महीनेs')
       })
     })
   })
 
   describe('xMonths', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xMonths', 1) === '1 month')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xMonths', 1) === ' 1 महीना')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xMonths', 2) === '2 months')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xMonths', 2) === '2 महीने')
       })
     })
   })
 
   describe('aboutXYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXYears', 1) === 'about 1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXYears', 1) === 'लगभग 1 वर्ष')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('aboutXYears', 2) === 'about 2 years')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('aboutXYears', 2) === ' लगभग 2 साल')
       })
     })
   })
 
   describe('xYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('xYears', 1) === '1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('xYears', 1) === ' 1 साल')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
         assert(formatDistance('xYears', 2) === '2 years')
       })
     })
   })
 
   describe('overXYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('overXYears', 1) === 'over 1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('overXYears', 1) === 'over  1 साल')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
         assert(formatDistance('overXYears', 2) === 'over 2 years')
       })
     })
   })
 
   describe('almostXYears', function () {
-    context('when the count equals 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('almostXYears', 1) === 'almost 1 year')
+    context('जब गिनती 1 के बराबर होती है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('almostXYears', 1) === 'लगभग 1 वर्ष')
       })
     })
 
-    context('when the count is more than 1', function () {
-      it('returns a proper string', function () {
-        assert(formatDistance('almostXYears', 2) === 'almost 2 years')
+    context('जब गिनती 1 से अधिक है', function () {
+      it(' एक उचित स्ट्रिंग देता है', function () {
+        assert(formatDistance('almostXYears', 2) === 'लगभग 2 वर्ष')
       })
     })
   })
 
-  context('with a past suffix', function () {
+  context(' पिछले प्रत्यय के साथ', function () {
     it('adds `ago` to a string', function () {
       var result = formatDistance('aboutXYears', 1, {
         addSuffix: true,
         comparison: -1
       })
-      assert(result === 'about 1 year ago')
+      assert(result === 'लगभग 1 वर्ष पूर्व')
     })
   })
 
@@ -432,7 +432,7 @@ describe('en-US locale > formatDistance', function () {
         addSuffix: true,
         comparison: 1
       })
-      assert(result === 'in half a minute')
+      assert(result === 'आधा मिनट में')
     })
   })
 })

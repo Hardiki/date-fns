@@ -6,27 +6,26 @@ import parseDecimal from '../../../_lib/parseDecimal/index.js'
 var matchOrdinalNumbersPattern = /^(\d+)(th|st|nd|rd)?/i
 
 var matchWeekdaysPatterns = {
-  narrow: /^(su|mo|tu|we|th|fr|sa)/i,
-  short: /^(sun|mon|tue|wed|thu|fri|sat)/i,
-  long: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
+  short: /^(रवि|सोम|मंगल|बुध|गुरू|शुक्र|शनि)/i,
+  long: /^(रविवार|सोमवार|मंगलवार|बुधवार|गुरूवार|शुक्रवार|शनिवार)/i
 }
 
 var parseWeekdayPatterns = {
-  any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
+  any: [/^रवि/i, /^सो/i, /^मं/i, /^बु/i, /^गु/i, /^शु/i, /^श/i]
 }
 
 var matchMonthsPatterns = {
-  short: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
-  long: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
+  
+  long: /^(जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्टूबर|नवंबर|दिसंबर)/i
 }
 
 var parseMonthPatterns = {
-  any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
+  any: [/^जन/i, /^फ़/i, /^मा/i, /^अप्रै/i, /^मई/i, /^जून/i, /^जुल/i, /^अग/i, /^सि/i, /^अ/i, /^न/i, /^दि/i]
 }
 
 var matchTimesOfDayPatterns = {
-  short: /^(am|pm)/i,
-  long: /^([ap]\.?\s?m\.?)/i
+  short: /^(एम|पीम)/i,
+  long: /^([एपी]\.?\s?m\.?)/i
 }
 
 var parseTimeOfDayPatterns = {

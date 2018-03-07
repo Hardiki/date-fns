@@ -81,9 +81,9 @@ export default function formatDistance (token, count, options) {
 
   if (options.addSuffix) {
     if (options.comparison > 0) {
-      return 'in ' + result
+      return 'में ' + result
     } else {
-      return result + ' ago'
+      return result + ' पूर्व'
     }
   }
 

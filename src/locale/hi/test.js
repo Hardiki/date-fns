@@ -16,7 +16,7 @@ import parse from '../../parse'
 import setDay from '../../setDay'
 import startOfWeek from '../../startOfWeek'
 
-describe.skip('hr locale', function () {
+describe.skip('hi locale', function () {
   context('with `differenceInCalendarWeeks`', function () {
     it('sets the first day of the week', function () {
       var result = differenceInCalendarWeeks(
@@ -42,24 +42,24 @@ describe.skip('hr locale', function () {
     describe('months', function () {
       it('Mo', function () {
         var result = format(date, 'Mo [month]', {locale: locale})
-        assert(result === '4th month')
+        assert(result === '4th महीना')
       })
 
       it('MMM', function () {
         var result = format(date, 'MMM', {locale: locale})
-        assert(result === 'Apr')
+        assert(result === 'अप्रैल')
       })
 
       it('MMMM', function () {
         var result = format(date, 'MMMM', {locale: locale})
-        assert(result === 'April')
+        assert(result === 'अप्रैल')
       })
     })
 
     describe('quarters', function () {
       it('Qo', function () {
         var result = format(date, 'Qo [quarter]', {locale: locale})
-        assert(result === '2nd quarter')
+        assert(result === '2nd त्रिमास')
       })
     })
 
