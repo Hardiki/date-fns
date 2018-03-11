@@ -220,9 +220,6 @@ describe('en-US locale > formatDistance', function () {
 // @flow
 /* eslint-env mocha */
 
-import assert from 'power-assert'
-import formatDistance from '.'
-
 describe('en-US locale > formatDistance', function () {
   describe('lessThanXSeconds', function () {
     context('जब गिनती 1 के बराबर होती है', function () {
